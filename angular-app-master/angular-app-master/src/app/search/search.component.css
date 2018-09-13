@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.spinner {
+  display: inline-block;
+  margin-bottom: -5px;
+}
+
+.search-results {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search-results a {
+  text-decoration: none;
+  color: #3752B4;
+}

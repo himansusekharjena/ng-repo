@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Planet details</h1>
+<div mat-dialog-content>
+  <ul class="planet-details">
+    <li *ngFor="let detail of planet">
+      <p><b>{{ detail.key }}:</b> {{ detail.value }}</p>
+    </li>
+  </ul>
+</div>
+<div mat-dialog-actions style="display: flex; justify-content: flex-end;">
+  <button mat-button [mat-dialog-close]="onCloseClick" cdkFocusInitial>Ok</button>
+</div>

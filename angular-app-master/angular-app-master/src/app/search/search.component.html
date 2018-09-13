@@ -1,0 +1,30 @@
+<mat-card class="container">
+  <div>
+    <h1>
+      Search page
+      <mat-spinner class="spinner" diameter="28" *ngIf="loading"></mat-spinner>
+    </h1>
+    <mat-form-field class="form-field">
+      <input
+        matInput
+        [disabled]="loading"
+        placeholder="Search"
+        [value]="searchInput"
+        (input)="handleInput($event.target.value)"
+      >
+    </mat-form-field>
+    <div *ngIf="searchInput !== '' && matchingPlanets.length > 0">
+      <ul class="search-results">
+        <li *ngFor="let matchingPlanet of matchingPlanets">
+          <a
+            [style.font-size]="getFontSize(matchingPlanet.population)"
+            (click)="handleLinkClick($event, matchingPlanet)"
+            href=""
+          >
+            {{ matchingPlanet.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</mat-card>
