@@ -1,0 +1,42 @@
+.center-content {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card {
+  padding-top: 10px;
+  position: relative;
+  width: 96%;
+  margin: auto;
+  max-width: 400px;
+  display: flex;
+  flex-flow: column;
+  align-self: flex-start;
+}
+
+.loading {
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  left: 0;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.submit-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+button {
+  text-transform: uppercase;
+}

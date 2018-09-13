@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <mat-toolbar color="primary">
+    <span>Angular app</span>
+    <span class="toolbar-spacing"></span>
+    <button *ngIf="isLoggedIn()" mat-button (click)="logout()">Logout</button>
+  </mat-toolbar>
+  <div class="router-outlet">
+    <router-outlet></router-outlet>
+  </div>
+</div>

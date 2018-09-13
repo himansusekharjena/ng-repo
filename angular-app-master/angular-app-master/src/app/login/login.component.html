@@ -1,0 +1,25 @@
+<div class="center-content">
+  <mat-card class="card">
+    <mat-progress-bar *ngIf="loading" class="loading" mode="indeterminate"></mat-progress-bar>
+    <h1 style="margin-top: 30px;">Login</h1>
+    <div *ngIf="errorMessage !== ''" style="color: red; text-align: center;">
+      {{ errorMessage }}
+    </div>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Name" [(ngModel)]="inputs.name">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input type="password" matInput placeholder="Password" [(ngModel)]="inputs.password">
+    </mat-form-field>
+    <div class="submit-container">
+      <button
+        mat-raised-button
+        [disabled]="loading"
+        color="primary"
+        (click)="login()"
+      >
+        Login
+      </button>
+    </div>
+  </mat-card>
+</div>
